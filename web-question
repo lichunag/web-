@@ -59,3 +59,13 @@
   right:0px;
   bottom:0px;
   margin:auto;//这句最为关键
+
+"理解盒子模型
+ padding是添加填充的，这个对于一个div中的两个元素很有作用,可以拉开两个元素的距离。
+ margin是设置元素之间的间距，这个要预防margin的重合。
+  解决margin的方案：在外层加padding，或
+
+
+
+
+
