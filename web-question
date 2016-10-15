@@ -12,10 +12,10 @@
 “div的box-sizing
 属性有两个内容框与边界盒
 一般是内容框>边界框
-内容框：
+内容框 content-box：
 填充和边框不被包含在定义的宽度和高度之内对象的实际宽度等于设置的宽度值和边界，填充之和，即（元素宽度=宽度+边框+填充）。
 此属性表现为标准模式下的盒模型，
-边界框：
+边界框 border-box(怪异模式)：
 填充和边界被包含在定义的宽度和高度之内。对象的实际宽度就等于设置的宽度值，即使定义有边界和填充也不会改变对象的实际宽度，即（元素宽度=宽度）
 此属性表现为怪异模式下的盒模型。
 
@@ -68,8 +68,63 @@
  margin是设置元素之间的间距，这个要预防margin的重合。
   解决margin的方案：在外层加padding，或者外层加border:1px solid red,加绝对定位,外层加overflow:hidden;
 
-
-   
+“对于vertical-align与line-height”
+  对于块级元素的内联元素，由于vertical-align与line-height作用,会有空白节点出现
+  1：从vertical-align入手
+      由于vertical-align对块级元素无感，可以使用display:block 定位或者浮动
+  2：修改line-height 或者height 尽量调小点
+  3：从字体大小入手
   
-
+ “对于伪类和伪元素”
+ css伪类是用于向某些选择器添加特殊的效果
+ css伪元素用于将特殊的效果添加到某些选择器
+ 相同点：两者都与选择器有关
+        再者就是添加一些特殊的效果，这里的特殊是指两者描述了其它css无法描述的东西。
+ 区别：伪类的效果可以通过添加一个实际的类来达到，而伪元素的效果则需要通过添加一个实际的元素才能达到，
+       这也是为什么他们一个称为伪类，一个称为伪元素的原因。
+   
+  “超出隐藏”
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellissis;
+  
+  “通用的设置样式”
+  解决元素周围的高亮边框
+ -webkit-tap-highlight-color:transparent;
+ 使IOS端的input表单元素的表现正常点
+ -webkit-appearance:none;
+ 使元素不触发
+ -webkit-touch-callout:none;
+ 是为了让滑屏更流畅
+ -webkit-overflow-scrolling:touch;
+使用伪类让控制条消失
+::-webkit-scrollbar
+*/
+*{margin: 0; padding: 0; font-size: 12px; line-height:20px; -webkit-tap-highlight-color:transparent; -webkit-appearance:none; color:#272636;}
+body{background-color: #feffff;}
+a, img {-webkit-touch-callout: none; }
+body{-webkit-overflow-scrolling:touch;}
+body::-webkit-scrollbar{width: 0px;}
+textarea::-webkit-scrollbar{width: 0px;}
+div::-webkit-scrollbar{width:0px;}
+a:focus,input:focus,div:focus{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{display: block; border: none 0; width: 100%;}
+input,textarea{border: 0 none; display: block;}
+input[type=search] { -webkit-appearance: none; }
+::-webkit-search-cancel-button { -webkit-appearance: none; }
+::-webkit-search-results-button { -webkit-appearance: none; }
+.d-block{display: block;}
+.d-none{display: none;}
+.v-none{visibility: hidden;}
+/*文字和li重置*/
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+a{text-decoration: none;}
+li{list-style: none;}
+/*浮动和定位*/
+.fl{float: left;}
+.fr{float: right;}
+.clear:after {clear:both;visibility:hidden;content:"";display:block;}
+.rel{position: relative;}
+.abs{position: absolute;}
+ /* 共同样式结束 */
 
