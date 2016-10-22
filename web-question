@@ -86,7 +86,7 @@
   “超出隐藏”
   overflow:hidden;
   white-space:nowrap;
-  text-overflow:ellissis;
+  text-overflow:ellipsis;
   
   “通用的设置样式”
   解决元素周围的高亮边框
