@@ -128,3 +128,6 @@ li{list-style: none;}
 .abs{position: absolute;}
  /* 共同样式结束 */
 
+/* 图片变灰 */
+    filter:grayscale(100%); 
+    -webkit-filter:grayscale(100%); 
