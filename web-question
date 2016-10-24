@@ -61,7 +61,17 @@ div{
    background:green;
 }
 
+"使用定位实现图片全屏显示"
+.content{
+	height: 310px;
+        background:url(image/banner2.jpg) #8d6364 no-repeat center;
+	padding:0px;
+	margin:0px;
+	position: relative;
+}
+<div class="content"></div>
 
+"对于使用百分比的，如果子级使用百分比，那么父级必须设置确定的宽高，不设置，子级设置的宽高会不起作用"
        
 “对于background的理解
    background-position:
