@@ -37,6 +37,31 @@ sapn{
   bottom:10px;
 }
 
+“对于两栏布局，左边宽度设为定值，右边自适应”
+<div>
+<span class="left"></span>
+<span class="right"></span>
+<div>
+css:
+div{
+  position: relative;
+}
+.left{
+   position:absolute;
+   top:0px;
+   left:0px;
+   width:100px;
+   backgroung:red;
+}
+.right{
+   position:absolute;
+   left:100px;
+   right:0px;
+   top:0px;
+   background:green;
+}
+
+
        
 “对于background的理解
    background-position:
