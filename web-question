@@ -24,6 +24,20 @@
  办法：大div：position：绝对定位
        小的div：position：相对定位；top:0px;bottom：0px;left:根据你的需要设置
        
+“使用position让元素达到全屏”      
+div>span
+如果想让span标签定位在底部，距离顶部10px
+div{
+position:绝对定位
+}
+sapn{
+  position:相对定位;
+  left:0px;
+  right:0xp;
+  bottom:10px;
+}
+
+       
 “对于background的理解
    background-position:
 1.关键字, 例如: background-position: top right;
