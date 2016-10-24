@@ -127,6 +127,17 @@ div{
   white-space:nowrap;
   text-overflow:ellipsis;
   
+  "使用input自定义的效果"
+  <input type="text" name="" value="" placeholder="asfd">
+  css:
+  		input{
+			border:none;
+			outline: 0px;
+			padding-left: 30px;
+			background: url(image/search.png) no-repeat center left 10px;
+			border:2px solid red;
+		}
+  
   “通用的设置样式”
   解决元素周围的高亮边框
  -webkit-tap-highlight-color:transparent;
